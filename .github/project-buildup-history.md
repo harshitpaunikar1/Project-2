@@ -12,3 +12,7 @@
 
 - Task summary: Used the next day to keep the momentum going for India Budget 2020 Economic Analysis. I was still piecing things together, so I focused on trying to collect the datasets, reference notes, or external documents needed for the study and wrote down the stuff that looked important. I was still mostly figuring out the shape of it, so a lot of the day went into small notes and half clear ideas. A lot of this also meant checking if the numbers were making sense and not just trusting the first result that showed up.
 - Deliverable: I wrapped up the day with source bundle mostly in place. It was not perfect, but it was good enough to keep the project moving. I also left myself a few rough reminders for the next day so I would not have to rediscover the same context again.
+## 2021-04-06 - Day 3: Cleanup pass
+
+- Task summary: By this point I had the rough direction, so the work became more practical. I spent most of the day trying to make the tables usable by fixing labels, missing values, and formatting issues and make the whole thing feel less half baked. The middle part always takes longer than it should, mostly becuase one fix usually reveals two more things to clean up. I kept bouncing between the notebook, small observations, and quick plots until the direction felt usable.
+- Deliverable: I wrapped up the day with usable analysis dataset mostly in place. It was not perfect, but it was good enough to keep the project moving. There were still a couple of loose parts, but nothing serious enough to block the next step.
