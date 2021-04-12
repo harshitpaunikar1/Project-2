@@ -36,3 +36,7 @@
 
 - Task summary: This was the middle stretch where the project started feeling real. I kept going and tried to connect the findings to what a manager or stakeholder should do next, then cleaned up whatever looked confusing or weak from the earlier days. By now I had enough structure to keep going without staring at the screen too long, which honestly helped a lot. Most of the progress here came from patient cleanup more than anything flashy.
 - Deliverable: Ended the day with actionable conclusions in hand, plus a few side notes on what still needed fixing later. It was not super polished, just stable enough that I felt okay moving forward.
+## 2021-04-12 - Day 7: Business meaning
+
+- Task summary: Came back after lunch and realized wrapped a repeated block in a helper function since it showed up three times.
+- Deliverable: One of those satisfying small wins.
