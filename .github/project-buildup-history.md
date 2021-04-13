@@ -32,3 +32,7 @@
 
 - Task summary: This was the middle stretch where the project started feeling real. I kept going and tried to connect the findings to what a manager or stakeholder should do next, then cleaned up whatever looked confusing or weak from the earlier days. By now I had enough structure to keep going without staring at the screen too long, which honestly helped a lot. Most of the progress here came from patient cleanup more than anything flashy.
 - Deliverable: Ended the day with actionable conclusions in hand, plus a few side notes on what still needed fixing later. It was not super polished, just stable enough that I felt okay moving forward.
+## 2021-04-13 - Day 8: Notebook cleanup
+
+- Task summary: Closer to the end, I was mostly tightening things up instead of inventing new scope. The job for the day was to reorder the notebook so the narrative is easy to follow so the final result looked a bit more complete. I was not trying to add anything fancy here, just making sure the thing looked complete enough to show someone. A lot of this also meant checking if the numbers were making sense and not just trusting the first result that showed up.
+- Deliverable: Ended the day with clean notebook flow in hand, plus a few side notes on what still needed fixing later. I also left myself a few rough reminders for the next day so I would not have to rediscover the same context again.
