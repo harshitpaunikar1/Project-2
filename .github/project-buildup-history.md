@@ -44,3 +44,7 @@
 
 - Task summary: Closer to the end, I was mostly tightening things up instead of inventing new scope. The job for the day was to reorder the notebook so the narrative is easy to follow so the final result looked a bit more complete. I was not trying to add anything fancy here, just making sure the thing looked complete enough to show someone. A lot of this also meant checking if the numbers were making sense and not just trusting the first result that showed up.
 - Deliverable: Ended the day with clean notebook flow in hand, plus a few side notes on what still needed fixing later. I also left myself a few rough reminders for the next day so I would not have to rediscover the same context again.
+## 2021-04-13 - Day 8: Notebook cleanup
+
+- Task summary: Came back after lunch and realized wrapped a repeated block in a helper function since it showed up three times.
+- Deliverable: Should've caught it earlier but better now than later.
