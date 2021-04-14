@@ -48,3 +48,7 @@
 
 - Task summary: Came back after lunch and realized wrapped a repeated block in a helper function since it showed up three times.
 - Deliverable: Should've caught it earlier but better now than later.
+## 2021-04-14 - Day 9: Slides/README check
+
+- Task summary: Closer to the end, I was mostly tightening things up instead of inventing new scope. The job for the day was to prepare a short slide-style summary or README with the strongest visuals so the final result looked a bit more complete. Most of the heavy lifting was already done, so this part was more about making the rough edges less obvious. I kept bouncing between the notebook, small observations, and quick plots until the direction felt usable.
+- Deliverable: Ended the day with stakeholder summary in hand, plus a few side notes on what still needed fixing later. There were still a couple of loose parts, but nothing serious enough to block the next step.
