@@ -40,3 +40,7 @@
 
 - Task summary: Closer to the end, I was mostly tightening things up instead of inventing new scope. The job for the day was to prepare a short slide-style summary or README with the strongest visuals so the final result looked a bit more complete. Most of the heavy lifting was already done, so this part was more about making the rough edges less obvious. I kept bouncing between the notebook, small observations, and quick plots until the direction felt usable.
 - Deliverable: Ended the day with stakeholder summary in hand, plus a few side notes on what still needed fixing later. There were still a couple of loose parts, but nothing serious enough to block the next step.
+## 2021-04-15 - Day 10: Final review wrap
+
+- Task summary: Used the last day on India Budget 2020 Economic Analysis to slow down and finish the loose ends. I mainly had to check the numbers, labels, and wording one last time and make sure the project told a clean story from start to finish. Toward the end I mostly kept trimming weird bits, fixing wording, and tying the loose parts together. Most of the progress here came from patient cleanup more than anything flashy.
+- Deliverable: Finished with reviewed analysis looking decent enough to call this version done, even if I could still nitpick a few things. It was not super polished, just stable enough that I felt okay moving forward.
