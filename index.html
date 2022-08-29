@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reading the Economy Before Budget 2020: A Policy Briefing</title>
+  <meta name="description" content="A policy-style analytical briefing for decision-makers preparing for India's Union Budget 2020. Growth slowdown, inflation, sectoral stress, and fiscal room — ranked by urgency.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #111111;
+      --ink-mid: #333333;
+      --ink-light: #555555;
+      --ink-muted: #888888;
+      --ink-faint: #bbb;
+      --rule: #ddd;
+      --divider: #e8e8e8;
+      --bg: #ffffff;
+      --bg-inset: #f0f0f0;
+      --serif: 'Libre Baskerville', Georgia, serif;
+      --sans: 'IBM Plex Sans', system-ui, sans-serif;
+      --mono: 'IBM Plex Mono', monospace;
+      --col: 680px;
+      --gap: 2rem;
+    }
+
+    html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+    body { background: var(--bg); color: var(--ink); font-family: var(--serif); line-height: 1.75; }
+
+    /* ── MASTHEAD ── */
+    .masthead {
+      border-bottom: 2px solid var(--ink);
+      padding: 2.5rem 3rem 2rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rem;
+      align-items: end;
+    }
+    .masthead-kicker {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 0.75rem;
+    }
+    .masthead h1 {
+      font-family: var(--serif);
+      font-size: clamp(1.7rem, 3.5vw, 2.5rem);
+      font-weight: 700;
+      line-height: 1.2;
+      max-width: 620px;
+      color: var(--ink);
+    }
+    .masthead-deck {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--ink-mid);
+      margin-top: 0.9rem;
+      max-width: 580px;
+      line-height: 1.6;
+    }
+    .masthead-meta {
+      text-align: right;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--ink-muted);
+      line-height: 1.8;
+    }
+    .masthead-meta strong { color: var(--ink); }
+
+    /* ── BODY LAYOUT ── */
+    .body-grid {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 3rem 3rem;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    @media (max-width: 780px) {
+      .body-grid { grid-template-columns: 1fr; gap: 2rem; padding: 2rem 1.5rem; }
+      .masthead { grid-template-columns: 1fr; padding: 2rem 1.5rem; }
+      .masthead-meta { text-align: left; }
+    }
+
+    /* ── SIDEBAR NAV ── */
+    .sidebar { position: sticky; top: 2rem; }
+    .sidebar-title {
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 1rem;
+    }
+    .sidebar nav a {
+      display: block;
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--ink-light);
+      text-decoration: none;
+      padding: 0.3rem 0;
+      border-left: 2px solid var(--divider);
+      padding-left: 0.75rem;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .sidebar nav a:hover { color: var(--ink); border-color: var(--ink); }
+
+    .brief-box {
+      margin-top: 2rem;
+      border: 1px solid var(--divider);
+      padding: 1rem;
+    }
+    .brief-box-title {
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 0.75rem;
+    }
+    .brief-row {
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      padding: 0.35rem 0;
+      border-bottom: 1px solid var(--divider);
+      gap: 0.5rem;
+    }
+    .brief-row:last-child { border-bottom: none; }
+    .brief-row span { color: var(--ink-muted); }
+    .brief-row strong { color: var(--ink); text-align: right; }
+
+    /* ── ARTICLE ── */
+    article { min-width: 0; }
+
+    .section-tab {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--ink);
+    }
+    .tab-num {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--ink-muted);
+      flex-shrink: 0;
+    }
+    .tab-label {
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      flex-shrink: 0;
+    }
+    h2 {
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    section { margin-bottom: 3.5rem; }
+    p { margin-bottom: 1.2rem; color: var(--ink-mid); font-size: 1rem; }
+    p strong { color: var(--ink); }
+    h3 {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--ink);
+      margin: 1.8rem 0 0.6rem;
+    }
+    ul, ol { padding-left: 1.4rem; color: var(--ink-mid); margin-bottom: 1.2rem; }
+    li { margin-bottom: 0.4rem; font-size: 1rem; }
+    li strong { color: var(--ink); }
+
+    /* callout */
+    .callout {
+      border-left: 3px solid var(--ink);
+      padding: 0.9rem 1.2rem;
+      margin: 1.8rem 0;
+      background: var(--bg-inset);
+    }
+    .callout p { margin-bottom: 0; font-style: italic; color: var(--ink-mid); font-size: 0.95rem; }
+
+    /* figure caption */
+    figcaption {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--ink-muted);
+      font-style: italic;
+      margin-top: 0.6rem;
+      line-height: 1.5;
+    }
+    figure { margin: 2.5rem 0; }
+
+    /* ── MACRO DASHBOARD SVG ── */
+    .dashboard-wrap {
+      overflow-x: auto;
+      margin: 2.5rem 0 0.5rem;
+    }
+
+    /* ── COMPARISON TABLE ── */
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      margin: 2rem 0 0.5rem;
+    }
+    .compare-table th {
+      font-weight: 600;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-align: left;
+      padding: 0.6rem 0.8rem;
+      border-bottom: 2px solid var(--ink);
+      color: var(--ink);
+      background: var(--bg);
+    }
+    .compare-table td {
+      padding: 0.6rem 0.8rem;
+      border-bottom: 1px solid var(--divider);
+      color: var(--ink-mid);
+      vertical-align: top;
+    }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table .indicator { font-weight: 600; color: var(--ink); font-family: var(--mono); font-size: 0.78rem; }
+    .compare-table .signal-warn { color: #1a1a1a; font-weight: 600; }
+    .compare-table .signal-ok { color: var(--ink-light); }
+    .compare-table .signal-mixed { color: var(--ink-mid); font-style: italic; }
+    .compare-table .priority-hi { font-weight: 700; color: var(--ink); }
+
+    /* code blocks */
+    pre, code {
+      font-family: var(--mono);
+      font-size: 0.85rem;
+    }
+    pre {
+      background: #111;
+      color: #f5f5f5;
+      padding: 1.2rem 1.4rem;
+      margin: 1.5rem 0;
+      overflow-x: auto;
+      line-height: 1.7;
+    }
+    code { background: var(--bg-inset); padding: 0.1em 0.35em; color: var(--ink); }
+
+    /* priority flag */
+    .priority-flag {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: 1px solid var(--ink);
+      padding: 0.15em 0.5em;
+      margin-right: 0.4rem;
+      vertical-align: middle;
+    }
+    .priority-flag.hi { background: var(--ink); color: var(--bg); }
+    .priority-flag.mid { background: var(--bg); color: var(--ink); }
+
+    /* final note */
+    .closing-rule {
+      border-top: 2px solid var(--ink);
+      margin-top: 4rem;
+      padding-top: 1.5rem;
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--ink-muted);
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════ MASTHEAD ══════════════════ -->
+<div class="masthead">
+  <div>
+    <p class="masthead-kicker">Policy Analytical Briefing &nbsp;·&nbsp; NITI Aayog &nbsp;·&nbsp; Pre-Budget Assessment</p>
+    <h1>Reading the Economy Before Budget&nbsp;2020</h1>
+    <p class="masthead-deck">Growth has slipped for six consecutive quarters. The question is not whether the slowdown is real — it is — but which levers the budget can plausibly pull and in what sequence.</p>
+  </div>
+  <div class="masthead-meta">
+    <div><span>CLASSIFICATION</span></div>
+    <div><strong>Internal &nbsp;/&nbsp; For Policy Use</strong></div>
+    <div style="margin-top:0.5rem"><span>PREPARED FOR</span></div>
+    <div><strong>Chief Ministers' Briefing Cycle</strong></div>
+    <div style="margin-top:0.5rem"><span>BUDGET WINDOW</span></div>
+    <div><strong>Feb 1, 2020</strong></div>
+    <div style="margin-top:0.5rem"><span>DATA PERIOD</span></div>
+    <div><strong>2014–15 to 2019–20</strong></div>
+  </div>
+</div>
+
+<!-- ══════════════════ BODY ══════════════════ -->
+<div class="body-grid">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <p class="sidebar-title">Contents</p>
+    <nav>
+      <a href="#macro">Macro Snapshot</a>
+      <a href="#growth">Growth Decomposition</a>
+      <a href="#inflation">Inflation &amp; Prices</a>
+      <a href="#sectors">Sector Performance</a>
+      <a href="#fiscal">Fiscal Position</a>
+      <a href="#state-divergence">State Divergence</a>
+      <a href="#priority">Budget Priority Matrix</a>
+      <a href="#recommendation">The Call</a>
+    </nav>
+
+    <div class="brief-box">
+      <p class="brief-box-title">Key Readings</p>
+      <div class="brief-row"><span>GDP Growth FY20</span><strong>~5.0%</strong></div>
+      <div class="brief-row"><span>Peak (FY17)</span><strong>8.2%</strong></div>
+      <div class="brief-row"><span>CPI Oct '19</span><strong>4.6%</strong></div>
+      <div class="brief-row"><span>WPI Oct '19</span><strong>0.0%</strong></div>
+      <div class="brief-row"><span>Fiscal Deficit</span><strong>~3.3% GDP</strong></div>
+      <div class="brief-row"><span>GFCF Growth</span><strong>↓ stalled</strong></div>
+      <div class="brief-row"><span>States in Stress</span><strong>7 of 22</strong></div>
+    </div>
+  </aside>
+
+  <!-- MAIN ARTICLE -->
+  <article>
+
+    <!-- ── SECTION 1: MACRO SNAPSHOT ── -->
+    <section id="macro">
+      <div class="section-tab">
+        <span class="tab-num">01</span>
+        <span class="tab-label">Overview</span>
+        <h2>Macro Snapshot: The Setting Before Budget Day</h2>
+      </div>
+
+      <p>The Union Budget of February 2020 arrived at the end of a sustained growth deceleration. India's GDP had expanded at 8.2 percent in FY17, then stepped down in a manner that confounded the government's projections: 7.2 percent in FY18, 6.8 percent in FY19, and estimates pointing to roughly 5.0 percent for FY20 — numbers confirmed by the National Statistical Office's first advance estimate in January 2020. A briefing built only on the headline would be incomplete; the structure beneath the headline is what matters for budget design.</p>
+
+      <p>Three forces were operating simultaneously and in the same direction. <strong>Private investment had stalled</strong>: Gross Fixed Capital Formation as a share of GDP had been declining since its peak near 34 percent in FY12 and was sitting below 30 percent by FY20. <strong>Private consumption had softened</strong>: rural demand weakened as farm income growth cooled, and urban demand saw a pullback in discretionary segments including automobiles, two-wheelers, and FMCG categories. <strong>Exports were not picking up the slack</strong>: global trade volumes were depressed by the US-China tariff cycle, and Indian merchandise exports grew negligibly in dollar terms through most of 2019.</p>
+
+      <p>The fiscal authority had limited space. The Fiscal Responsibility and Budget Management Act committed the government to a 3.0 percent deficit ceiling, but the government had repeatedly relied on accounting devices — off-balance-sheet borrowings through state-run enterprises, deferred payments to the Food Corporation of India — to report compliance while actual demand was higher. The honest fiscal position entering 2020 was tighter than the headline suggested, and any stimulus ambition had to be weighed against market appetite for additional sovereign paper.</p>
+
+      <div class="dashboard-wrap">
+        <figure>
+          <!-- MACRO DASHBOARD: 4-panel SVG sparkline strip -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 230" width="860" style="max-width:100%;display:block;">
+            <!-- Background panels -->
+            <rect x="0" y="0" width="880" height="230" fill="#fff"/>
+
+            <!-- Panel separators -->
+            <line x1="215" y1="10" x2="215" y2="210" stroke="#ddd" stroke-width="1"/>
+            <line x1="430" y1="10" x2="430" y2="210" stroke="#ddd" stroke-width="1"/>
+            <line x1="645" y1="10" x2="645" y2="210" stroke="#ddd" stroke-width="1"/>
+
+            <!-- ── PANEL 1: GDP GROWTH ── -->
+            <text x="22" y="30" font-family="IBM Plex Mono,monospace" font-size="9" fill="#888" letter-spacing="1">PANEL 01</text>
+            <text x="22" y="45" font-family="IBM Plex Sans,sans-serif" font-size="11" font-weight="600" fill="#111">GDP GROWTH RATE</text>
+            <!-- sparkline coords: FY15=7.4, FY16=8.0, FY17=8.2, FY18=7.2, FY19=6.8, FY20=5.0 -->
+            <!-- x: 22,55,88,121,154,187 | y scaled from bottom baseline 170, 1%=5px -->
+            <polyline points="22,133 55,130 88,129 121,137 154,140 187,152"
+              fill="none" stroke="#111" stroke-width="2"/>
+            <!-- data dots -->
+            <circle cx="22" cy="133" r="2.5" fill="#111"/>
+            <circle cx="55" cy="130" r="2.5" fill="#111"/>
+            <circle cx="88" cy="129" r="2.5" fill="#111"/>
+            <circle cx="121" cy="137" r="2.5" fill="#111"/>
+            <circle cx="154" cy="140" r="2.5" fill="#111"/>
+            <circle cx="187" cy="152" r="3" fill="#111"/>
+            <!-- x-axis labels -->
+            <text x="16" y="168" font-family="IBM Plex Mono,monospace" font-size="8.5" fill="#aaa">FY15</text>
+            <text x="49" y="168" font-family="IBM Plex Mono,monospace" font-size="8.5" fill="#aaa">FY16</text>
+            <text x="82" y="168" font-family="IBM Plex Mono,monospace" font-size="8.5" fill="#aaa">FY17</text>
+            <text x="115" y="168" font-family="IBM Plex Mono,monospace" font-size="8.5" fill="#aaa">FY18</text>
+            <text x="147" y="168" font-family="IBM Plex Mono,monospace" font-size="8.5" fill="#aaa">FY19</text>
+            <text x="179" y="168" font-family="IBM Plex Mono,monospace" font-size="8.5" fill="#aaa">FY20E</text>
+            <!-- current value -->
+            <text x="22" y="186" font-family="IBM Plex Mono,monospace" font-size="18" font-weight="500" fill="#111">5.0%</text>
+            <text x="22" y="200" font-family="IBM Plex Sans,sans-serif" font-size="9" fill="#888" font-style="italic">6-qtr consecutive deceleration</text>
+            <!-- budget window marker -->
+            <rect x="183" y="60" width="3" height="100" fill="#111" opacity="0.15"/>
+            <text x="181" y="57" font-family="IBM Plex Mono,monospace" font-size="8.5" fill="#888">Budget</text>
+
+            <!-- ── PANEL 2: CPI INFLATION ── -->
+            <text x="237" y="30" font-family="IBM Plex Mono,monospace" font-size="9" fill="#888" letter-spacing="1">PANEL 02</text>
+            <text x="237" y="45" font-family="IBM Plex Sans,sans-serif" font-size="11" font-weight="600" fill="#111">CPI INFLATION</text>
+            <!-- FY15=5.9, FY16=4.9, FY17=4.5, FY18=3.6, FY19=3.4, Oct19=4.6 -->
+            <!-- x: 237,270,303,336,369,402 | y scaled: base 170, 1%=6px, so 5.9→135, 4.9→141,4.5→143,3.6→149,3.4→150,4.6→142 -->
+            <polyline points="237,135 270,141 303,143 336,149 369,150 402,142"
+              fill="none" stroke="#111" stroke-width="2"/>
+            <circle cx="237" cy="135" r="2.5" fill="#111"/>
+            <circle cx="270" cy="141" r="2.5" fill="#111"/>
+            <circle cx="303" cy="143" r="2.5" fill="#111"/>
+            <circle cx="336" cy="149" r="2.5" fill="#111"/>
+            <circle cx="369" cy="150" r="2.5" fill="#111"/>
+            <circle cx="402" cy="142" r="3" fill="#111"/>
+            <!-- labels -->
+            <text x="231" y="168" font-family="IBM Plex Mono,monospace" font-size="8.5" fill="#aaa">FY15</text>
+            <text x="264" y="168" font-family="IBM Plex Mono,monospace" font-size="8.5" fill="#aaa">FY16</text>
+            <text x="297" y="168" font-family="IBM Plex Mono,monospace" font-size="8.5" fill="#aaa">FY17</text>
+            <text x="330" y="168" font-family="IBM Plex Mono,monospace" font-size="8.5" fill="#aaa">FY18</text>
+            <text x="363" y="168" font-family="IBM Plex Mono,monospace" font-size="8.5" fill="#aaa">FY19</text>
+            <text x="393" y="168" font-family="IBM Plex Mono,monospace" font-size="8.5" fill="#aaa">Oct'19</text>
+            <text x="237" y="186" font-family="IBM Plex Mono,monospace" font-size="18" font-weight="500" fill="#111">4.6%</text>
+            <text x="237" y="200" font-family="IBM Plex Sans,sans-serif" font-size="9" fill="#888" font-style="italic">Onion spike; core tame at 3.5%</text>
+            <!-- budget marker -->
+            <rect x="398" y="60" width="3" height="100" fill="#111" opacity="0.15"/>
+            <text x="396" y="57" font-family="IBM Plex Mono,monospace" font-size="8.5" fill="#888">Budget</text>
+
+            <!-- ── PANEL 3: FISCAL DEFICIT ── -->
+            <text x="452" y="30" font-family="IBM Plex Mono,monospace" font-size="9" fill="#888" letter-spacing="1">PANEL 03</text>
+            <text x="452" y="45" font-family="IBM Plex Sans,sans-serif" font-size="11" font-weight="600" fill="#111">FISCAL DEFICIT % GDP</text>
+            <!-- FY15=4.0, FY16=3.5, FY17=3.5, FY18=3.5, FY19=3.4, FY20=3.3 -->
+            <!-- x: 452..617 | y scaled base 170, 1%=10px: 4.0→130, 3.5→135, 3.4→136, 3.3→137 -->
+            <polyline points="452,130 485,135 518,135 551,135 584,136 617,137"
+              fill="none" stroke="#333" stroke-width="2" stroke-dasharray="4,2"/>
+            <circle cx="452" cy="130" r="2.5" fill="#333"/>
+            <circle cx="485" cy="135" r="2.5" fill="#333"/>
+            <circle cx="518" cy="135" r="2.5" fill="#333"/>
+            <circle cx="551" cy="135" r="2.5" fill="#333"/>
+            <circle cx="584" cy="136" r="2.5" fill="#333"/>
+            <circle cx="617" cy="137" r="3" fill="#333"/>
+            <!-- FRBM ceiling line -->
+            <line x1="452" y1="140" x2="617" y2="140" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
+            <text x="619" y="143" font-family="IBM Plex Mono,monospace" font-size="8.5" fill="#aaa">3.0%</text>
+            <!-- labels -->
+            <text x="446" y="168" font-family="IBM Plex Mono,monospace" font-size="8.5" fill="#aaa">FY15</text>
+            <text x="479" y="168" font-family="IBM Plex Mono,monospace" font-size="8.5" fill="#aaa">FY16</text>
+            <text x="512" y="168" font-family="IBM Plex Mono,monospace" font-size="8.5" fill="#aaa">FY17</text>
+            <text x="545" y="168" font-family="IBM Plex Mono,monospace" font-size="8.5" fill="#aaa">FY18</text>
+            <text x="578" y="168" font-family="IBM Plex Mono,monospace" font-size="8.5" fill="#aaa">FY19</text>
+            <text x="607" y="168" font-family="IBM Plex Mono,monospace" font-size="8.5" fill="#aaa">FY20E</text>
+            <text x="452" y="186" font-family="IBM Plex Mono,monospace" font-size="18" font-weight="500" fill="#111">3.3%</text>
+            <text font-family="IBM Plex Sans,sans-serif" font-size="9" fill="#888" font-style="italic">
+              <tspan x="452" y="200">Above FRBM; off-balance</tspan>
+              <tspan x="452" dy="11">borrowing hides true cost</tspan>
+            </text>
+            <!-- budget marker -->
+            <rect x="613" y="60" width="3" height="100" fill="#111" opacity="0.15"/>
+            <text x="611" y="57" font-family="IBM Plex Mono,monospace" font-size="8.5" fill="#888">Budget</text>
+
+            <!-- ── PANEL 4: GSDP AVG GROWTH ── -->
+            <text x="667" y="30" font-family="IBM Plex Mono,monospace" font-size="9" fill="#888" letter-spacing="1">PANEL 04</text>
+            <text x="667" y="45" font-family="IBM Plex Sans,sans-serif" font-size="11" font-weight="600" fill="#111">STATE GSDP DISPERSION</text>
+            <!-- Bar chart: Low-growth states avg 4.2 vs High-growth avg 9.1 -->
+            <!-- two bars side by side: low=4.2, high=9.1, mid=6.0 (national) -->
+            <rect x="680" y="105" width="30" height="55" fill="#ccc"/>
+            <text x="680" y="100" font-family="IBM Plex Mono,monospace" font-size="8" fill="#888">4.2%</text>
+            <text x="680" y="172" font-family="IBM Plex Mono,monospace" font-size="8.5" fill="#aaa">Stressed</text>
+            <text x="680" y="181" font-family="IBM Plex Mono,monospace" font-size="8.5" fill="#aaa">States</text>
+
+            <rect x="724" y="135" width="30" height="25" fill="#888"/>
+            <text x="724" y="130" font-family="IBM Plex Mono,monospace" font-size="8" fill="#888">5.8%</text>
+            <text x="724" y="172" font-family="IBM Plex Mono,monospace" font-size="8.5" fill="#aaa">National</text>
+            <text x="724" y="181" font-family="IBM Plex Mono,monospace" font-size="8.5" fill="#aaa">Avg</text>
+
+            <rect x="770" y="85" width="30" height="75" fill="#111"/>
+            <text x="770" y="80" font-family="IBM Plex Mono,monospace" font-size="8" fill="#333">9.1%</text>
+            <text x="770" y="172" font-family="IBM Plex Mono,monospace" font-size="8.5" fill="#aaa">Growth</text>
+            <text x="770" y="181" font-family="IBM Plex Mono,monospace" font-size="8.5" fill="#aaa">Leaders</text>
+
+            <text x="667" y="200" font-family="IBM Plex Sans,sans-serif" font-size="9" fill="#888" font-style="italic">5x gap between slowest and fastest states</text>
+          </svg>
+          <figcaption><em>Fig. 1 — Four macro indicators aligned to the Budget 2020 window (shaded bar). Each panel shows a five-year trend, current reading, and a one-line implication. Growth and fiscal deficit are most policy-relevant; inflation is conditional; state dispersion demands targeted transfer design.</em></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ── SECTION 2: GROWTH DECOMPOSITION ── -->
+    <section id="growth">
+      <div class="section-tab">
+        <span class="tab-num">02</span>
+        <span class="tab-label">Growth</span>
+        <h2>Growth Decomposition: Where the Demand Went</h2>
+      </div>
+
+      <p>Gross Domestic Product on the expenditure side is consumption plus investment plus government spending plus net exports. In FY20, three of those four components were moving unfavorably at the same time.</p>
+
+      <h3>Private Consumption</h3>
+      <p>Private Final Consumption Expenditure — historically the most reliable growth engine, accounting for nearly 56 percent of GDP — slowed to around 5.4 percent in FY20 from 8.1 percent the previous year. The sectoral evidence is hard to dismiss: passenger vehicle sales fell roughly 18 percent year-on-year through the first half of the fiscal year, two-wheeler registrations contracted for the first time in a decade, and FMCG companies in their quarterly calls consistently cited rural volume weakness. The proximate causes were threefold: <strong>farm income compression</strong> following consecutive below-average monsoons and weak crop prices, <strong>NBFC liquidity disruption</strong> that followed the IL&amp;FS crisis of 2018 and dried up retail credit for durables, and <strong>employment softness</strong> in the unorganized sector after the demonetization and GST transition period. Each alone would be manageable; the combination made a demand recovery self-reinforcing in the wrong direction.</p>
+
+      <h3>Gross Fixed Capital Formation</h3>
+      <p>Investment growth had been decelerating since FY12, but the FY19-20 stall was acute. Private corporate investment remained subdued — capacity utilization in manufacturing tracked near 69-72 percent, below the threshold at which fresh capex becomes rational for most producers. The banking channel offered no traction: public sector bank balance sheets were still being repaired after the NPA crisis, and credit growth to industry was running below 5 percent nominal. Government capital expenditure was constrained by the fiscal arithmetic. The result: GFCF grew at single-digit real rates in a year when India needed investment to absorb a young labor force entering at scale.</p>
+
+      <h3>Government Spending</h3>
+      <p>The one partial exception. Government final consumption grew at over 11 percent in FY19 and remained positive in FY20, but this avenue was approaching its ceiling. The fiscal deficit target, under bond market scrutiny, limited how aggressively the government could offset private demand weakness through its own spending. The budget design had to choose: honor the fiscal consolidation path and accept slower growth, or deviate credibly enough to stimulate without triggering a sovereign risk repricing. That tension is the primary constraint at the budget table.</p>
+
+      <div class="callout">
+        <p>The arithmetic problem: to recover half a percentage point of GDP growth through government spending alone, given a fiscal multiplier near 0.8 in a consumption-depressed economy, requires roughly 0.6 percent of GDP in additional outlay — approximately ₹1.2 lakh crore at FY20 GDP scale. That is not stimulus money the budget had obviously available.</p>
+      </div>
+    </section>
+
+    <!-- ── SECTION 3: INFLATION ── -->
+    <section id="inflation">
+      <div class="section-tab">
+        <span class="tab-num">03</span>
+        <span class="tab-label">Inflation</span>
+        <h2>Inflation: A Conditional Green Light for Rate Relief</h2>
+      </div>
+
+      <p>The inflation picture entering the budget was unusual. Headline CPI had risen to 4.6 percent by October 2019 — just above the RBI's 4.0 percent midpoint target — but the driver was entirely a vegetable price spike, principally onions, following supply disruptions from excess rainfall in Maharashtra and Karnataka. Strip out food and fuel and core inflation was running near 3.5 percent, well contained.</p>
+
+      <p>This distinction matters for budget design in two ways. First, a food-driven inflation spike does not respond to tighter fiscal or monetary policy; raising rates to combat an onion shortage destroys demand in sectors that are already contracting. The MPC, to its credit, had cut the repo rate by 135 basis points between February and October 2019 in recognition of this distinction. Second, the budget's procurement and distribution interventions — buffer stock management, export-import policy for agricultural commodities — are more directly relevant to food price stability than any fiscal lever affecting aggregate demand.</p>
+
+      <p>The WPI reading of roughly zero percent through October 2019 was the more alarming signal for industrial producers. Near-zero wholesale inflation implies margin compression for manufacturers who see input costs move with global commodity prices (which had softened) but find their own output prices unable to hold. That dynamic, persistent over enough quarters, discourages reinvestment even when nominal demand is stable. The budget's corporate tax cut of September 2019 — announced outside the budget cycle and reducing the effective rate to 25.17 percent for domestic companies — was a direct response to this margin pressure, and it had some mechanical effect on reported profitability. Whether it translated into capital expenditure would depend on whether demand visibility improved, which budget day had not resolved.</p>
+    </section>
+
+    <!-- ── SECTION 4: SECTORS ── -->
+    <section id="sectors">
+      <div class="section-tab">
+        <span class="tab-num">04</span>
+        <span class="tab-label">Sectors</span>
+        <h2>Sector Performance: Stress Is Not Evenly Distributed</h2>
+      </div>
+
+      <p>The aggregate growth number conceals wide sectoral variation. Budget design that treats the economy as homogeneous misallocates the policy medicine.</p>
+
+      <h3>Agriculture</h3>
+      <p>Agriculture, forestry, and fishing — roughly 15 percent of GVA and the primary livelihood for over 40 percent of the workforce — showed modest improvement in FY20 after two subdued years. Kharif sowing improved with better monsoon distribution in most regions. But structural farm income is determined less by output volume than by minimum support price credibility, market access infrastructure, and input cost trajectories. The PM-KISAN scheme, announced in the interim budget of 2019, was injecting ₹6,000 per year per farmer family, which provided a floor but not a recovery catalyst. Farm loan waivers at the state level had created moral hazard in credit markets without visibly improving farmer balance sheets.</p>
+
+      <h3>Manufacturing</h3>
+      <p>Manufacturing's GVA growth had declined to 2.0 percent in the April-June 2019 quarter, the weakest reading in years. The automotive sector, which accounts for roughly 7.5 percent of GDP through direct and indirect linkages, was in a structural adjustment period as the industry transitioned to BS-VI emission norms by April 2020 — a transition that froze buying decisions as consumers waited for new-norm vehicles and dealers de-stocked aggressively. The MSME segment was simultaneously under credit stress; the NBFC liquidity crunch hit small manufacturers who depended on non-bank lenders for working capital.</p>
+
+      <h3>Services</h3>
+      <p>Services remained relatively resilient, particularly IT services exports and financial services. But real estate, construction, and the entire ecosystem of building-linked consumption — cement, steel, white goods — were under acute stress. The RERA framework had created compliance costs that smaller developers struggled to absorb, project completion delays froze capital, and homebuyer confidence remained depressed despite price stagnation in most urban markets. The government's ₹25,000 crore Alternative Investment Fund for stalled housing projects, announced in September 2019, was the right diagnostic acknowledgment but insufficient at the scale of the problem, which involved over 1,600 stalled projects across the country.</p>
+    </section>
+
+    <!-- ── SECTION 5: FISCAL POSITION ── -->
+    <section id="fiscal">
+      <div class="section-tab">
+        <span class="tab-num">05</span>
+        <span class="tab-label">Fiscal</span>
+        <h2>Fiscal Position: The Arithmetic Is Honest Only Off-Sheet</h2>
+      </div>
+
+      <p>The reported fiscal deficit of 3.3 percent for FY20 requires qualification. India's central government had by 2020 developed a set of financing arrangements that shifted spending off the consolidated fiscal statement: the Food Corporation of India was borrowing from the National Small Savings Fund rather than receiving budgetary support, power sector dues to NTPC were deferred, oil marketing companies absorbed subsidy under-recoveries that were not fully compensated in the year they occurred. Independent estimates placed the "augmented" fiscal deficit — including off-balance-sheet items — somewhere between 5.0 and 5.5 percent of GDP.</p>
+
+      <p>Tax revenue entered FY20 under target. GST collections were averaging approximately ₹1.01 lakh crore per month against a budget estimate of ₹1.21 lakh crore. Direct tax collections were also short following the corporate tax rate cut of September 2019, which the Finance Ministry had not fully factored into the revised estimates. The revenue shortfall triggered expenditure compression: capital expenditure by states and by some central ministries was being managed downward to protect the deficit optics, which was itself a growth headwind.</p>
+
+      <p>The budget's room for maneuver was narrowed further by committed expenditures that are politically and contractually difficult to reduce: interest payments on the outstanding debt stock (roughly 45 percent of revenue receipts), defense revenue expenditure, civil service salaries after the 7th Pay Commission recommendations, and food, fertilizer, and petroleum subsidies. After these commitments, the discretionary allocation available for infrastructure, health, education, and rural development was significantly smaller than the headline expenditure numbers suggested.</p>
+    </section>
+
+    <!-- ── SECTION 6: STATE DIVERGENCE ── -->
+    <section id="state-divergence">
+      <div class="section-tab">
+        <span class="tab-num">06</span>
+        <span class="tab-label">States</span>
+        <h2>State Divergence: The Policy Cannot Be One-Size</h2>
+      </div>
+
+      <p>The GSDP analysis across major states reveals a pattern that a single national budget cannot address through uniform policy instruments. The top-performing states — Gujarat, Maharashtra, Telangana, Karnataka — were growing above 9 percent on a GSDP basis and needed different things from the centre than the stressed states.</p>
+
+      <p>The stressed tier — Bihar, Uttar Pradesh, Jharkhand, Odisha, and clusters within Madhya Pradesh and Rajasthan — were carrying a combination of weak fiscal capacity, low human development indicators, and limited industrial base. For these states, the relevant budget levers were not investment climate reform or logistics infrastructure (useful but long-cycle) but transfers through the revenue sharing formula, centrally sponsored scheme funding, and the National Rural Employment Guarantee scheme as a demand floor. The Finance Commission formula for devolution, operating on a base year's data, was already lagging the fast-growing states' contribution to the national tax pool — a structural inequity that the budget day instruments could not fully correct.</p>
+
+      <p>The policy implication for budget design: announcements made at the national level need state-specific implementation plans, and performance monitoring of centrally sponsored schemes needed to weight absorption capacity, not just release of funds. States with stronger bureaucratic capacity and project preparation pipelines would benefit more from capital expenditure pushes; states with lower capacity needed formula-based transfers that did not require competitive project preparation.</p>
+    </section>
+
+    <!-- ── SECTION 7: PRIORITY MATRIX ── -->
+    <section id="priority">
+      <div class="section-tab">
+        <span class="tab-num">07</span>
+        <span class="tab-label">Matrix</span>
+        <h2>Indicator Priority Matrix for Budget Design</h2>
+      </div>
+
+      <p>Not every economic signal needs the same budget response. The table below ranks the indicators by urgency, fiscal tractability, and the time horizon over which budget instruments can plausibly produce impact.</p>
+
+      <figure>
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Indicator</th>
+              <th>Current Reading</th>
+              <th>Budget Instrument Available?</th>
+              <th>Response Horizon</th>
+              <th>Priority</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="indicator">Private Investment (GFCF)</td>
+              <td class="signal-warn">Stalled; capacity utilization 70%</td>
+              <td>Indirect — policy certainty, credit guarantee, capex announcement</td>
+              <td>6–18 months</td>
+              <td class="priority-hi"><span class="priority-flag hi">HIGH</span> Policy-rate coordination needed</td>
+            </tr>
+            <tr>
+              <td class="indicator">Rural Demand / Farm Income</td>
+              <td class="signal-warn">Weak; FMCG &amp; auto volumes confirm</td>
+              <td>PM-KISAN scale-up, procurement reform, rural capex (PMGSY, Jal Jeevan)</td>
+              <td>1–4 quarters</td>
+              <td class="priority-hi"><span class="priority-flag hi">HIGH</span> Quickest demand multiplier</td>
+            </tr>
+            <tr>
+              <td class="indicator">NBFC / Credit Markets</td>
+              <td class="signal-warn">Partial recovery post-IL&amp;FS; MSME credit thin</td>
+              <td>Credit guarantee corpus, PSB recapitalization signaling</td>
+              <td>3–12 months</td>
+              <td class="priority-hi"><span class="priority-flag hi">HIGH</span> Blocking transmission mechanism</td>
+            </tr>
+            <tr>
+              <td class="indicator">Housing / Construction</td>
+              <td class="signal-mixed">Stalled; AIF fund too small at scale</td>
+              <td>AIF scale-up, GST rationalization on under-construction units</td>
+              <td>6–24 months</td>
+              <td class="priority-hi"><span class="priority-flag mid">MED</span> High employment linkage; slow cycle</td>
+            </tr>
+            <tr>
+              <td class="indicator">CPI Inflation (Food)</td>
+              <td class="signal-mixed">Temporary spike; core contained</td>
+              <td>Supply-side only — buffer stocks, import duty adjustments</td>
+              <td>1–3 months</td>
+              <td class="priority-hi"><span class="priority-flag mid">MED</span> Do not raise rates; let RBI monitor</td>
+            </tr>
+            <tr>
+              <td class="indicator">Fiscal Deficit (Reported)</td>
+              <td class="signal-warn">3.3% reported; ~5%+ augmented</td>
+              <td>Credible off-sheet cleanup improves market confidence more than headline target</td>
+              <td>Structural</td>
+              <td class="priority-hi"><span class="priority-flag mid">MED</span> Transparency more important than number</td>
+            </tr>
+            <tr>
+              <td class="indicator">Export Growth</td>
+              <td class="signal-ok">Near-flat in dollar terms</td>
+              <td>Limited; global demand not budget-controllable</td>
+              <td>18+ months</td>
+              <td class="priority-hi"><span class="priority-flag mid">LOW</span> PLI schemes are a multi-year play</td>
+            </tr>
+            <tr>
+              <td class="indicator">State GSDP Disparity</td>
+              <td class="signal-mixed">5× gap between slowest/fastest</td>
+              <td>CSS funding design, devolution formula advocacy to Finance Commission</td>
+              <td>Multi-year</td>
+              <td class="priority-hi"><span class="priority-flag mid">MED</span> Structural; budget can only signal</td>
+            </tr>
+          </tbody>
+        </table>
+        <figcaption><em>Fig. 2 — Indicator priority matrix. Columns map each economic signal to the budget instruments available, the realistic response horizon, and a priority tier. The three HIGH-priority items share a common thread: they operate through the same demand-and-credit transmission channel, so a response to one reinforces the others.</em></figcaption>
+      </figure>
+    </section>
+
+    <!-- ── SECTION 8: THE CALL ── -->
+    <section id="recommendation">
+      <div class="section-tab">
+        <span class="tab-num">08</span>
+        <span class="tab-label">Assessment</span>
+        <h2>The Call: What Should Matter Most at Budget Time</h2>
+      </div>
+
+      <p>The evidence arranges itself into a reasonably clear hierarchy, but the budget's execution problem is more difficult than its diagnosis problem.</p>
+
+      <p><strong>The fastest-returning lever is rural demand.</strong> Rural consumption is the one channel where budget instruments — direct income support, rural infrastructure, agricultural procurement reliability — can plausibly move the needle within one to two quarters. The PM-KISAN coverage extension and the Jal Jeevan Mission were already designed; the question at the budget margin was whether funding releases would be disciplined or deferred for fiscal optics. Deferral is a false economy: the demand drag from rural weakness was already showing up in urban consumption as secondary effects.</p>
+
+      <p><strong>The structural repair is the credit market.</strong> Private investment will not recover without functional credit transmission. Corporate tax cuts had improved balance sheet attractiveness for large firms; the missing link was the MSME and retail credit channel. A properly sized credit guarantee fund for NBFCs and a cleaner signal on public sector bank recapitalization was more useful than another round of sectoral exemptions or export incentives. Budget 2020 had to decide whether it wanted to restore the plumbing or continue listing symptoms.</p>
+
+      <p><strong>The fiscal consolidation commitment needed honesty, not arithmetic.</strong> Market participants and rating agencies were not fooled by the reported 3.3 percent deficit when the FCI's borrowings, oil under-recoveries, and state distribution company dues were visible elsewhere. A credible plan to bring off-balance-sheet items onto the budget — even if it temporarily widened the headline number — would do more for sovereign confidence than a further year of compressed capex to hit the stated target. The Fiscal Responsibility and Budget Management Act is only credible if its numbers are believed; a low number that is not believed is worth less than a higher number that is.</p>
+
+      <p><strong>Inflation is a monitoring condition, not a crisis.</strong> The RBI's rate cut cycle still had room if core inflation stayed contained. The food spike was supply-side and self-correcting; the budget's job was to stay clear of demand-compressing responses and let the central bank hold its course.</p>
+
+      <p><strong>State differentiation cannot be wished away.</strong> Announcements at the national press conference are not policies until they have been disaggregated by state capacity. Effective budget design in 2020 required the Finance Ministry to think explicitly about which states would absorb which schemes and at what pace. Uniform national targets produce uneven implementation and incomplete impact attribution — which is why successive budget cycles had seen large headline allocations matched by low utilization rates in lower-capacity states.</p>
+
+      <div class="callout">
+        <p>The budget that merely projects competence achieves little. The budget that honestly names the demand channels it is trying to repair, specifies the credit market conditions it needs from the RBI, and concedes the off-balance-sheet reality will be remembered for the right reasons — not because the numbers were brave, but because the diagnosis was accurate.</p>
+      </div>
+
+      <p>The data from the GSDP dataset, when stripped of outliers and read against the fiscal position, suggests a recovery window of six to twelve months if the credit and rural demand levers are activated together. That window requires coordination between the Finance Ministry, the RBI, and state governments on scheme absorption. A briefing that stops at aggregate growth projections misses the mechanism — and mechanism is where budget design either works or wastes its headline numbers.</p>
+    </section>
+
+    <div class="closing-rule">
+      <p>This briefing draws on publicly available GSDP data, National Statistical Office advance estimates, RBI monetary policy statements, and sector-level quarterly indicators. The NITI Aayog's state development index methodology provides the comparative framework for the state divergence section. Numbers marked as estimates reflect pre-final NSO releases available before Budget Day 2020.</p>
+    </div>
+
+  </article>
+</div>
+
+</body>
+</html>
