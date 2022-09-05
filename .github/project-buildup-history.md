@@ -12,3 +12,7 @@
 
 - Task summary: Late session: the sector labels in the charts were long and were getting clipped on the y-axis. Shortened them with abbreviations and added a legend mapping abbreviations back to full names.
 - Deliverable: Chart labels cleaned up. Abbreviation legend added.
+## 2022-09-05 - Day 5: Deficit and revenue analysis
+
+- Task summary: Focused on the fiscal deficit and revenue side of the India Budget analysis today. Plotted the revenue deficit alongside the fiscal deficit over time to show how the composition changed. Also looked at the direct vs indirect tax breakdown and how it related to economic activity. The revenue from disinvestment targets was notably optimistic compared to historical achievement rates, which became one of the key discussion points in the analysis narrative.
+- Deliverable: Deficit and revenue analysis complete. Disinvestment gap highlighted in narrative.
