@@ -20,3 +20,7 @@
 
 - Task summary: Pulled together the final narrative for the India Budget 2020 analysis. The analysis had several threads — sector allocation, fiscal deficit, revenue mix, and disinvestment — and needed a coherent story connecting them. Wrote an executive summary that led with the three main findings and then described each in more detail. Also added a data sources section with proper citation and a limitations caveat about using announced vs actual expenditure figures.
 - Deliverable: Final narrative complete. Executive summary written. Sources and limitations documented.
+## 2022-11-28 - Day 7: Repository cleanup
+
+- Task summary: Final cleanup on the India Budget analysis. Removed scratch cells, made sure all charts had titles and axis labels, and checked that the notebook ran cleanly from top to bottom without needing any manual intervention. Also moved the data files into a proper data directory and updated the load paths throughout.
+- Deliverable: Repository cleaned. Notebook runs top-to-bottom cleanly.
