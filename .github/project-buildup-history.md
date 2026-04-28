@@ -18,7 +18,7 @@
 - Deliverable: Deficit and revenue analysis complete. Disinvestment gap highlighted in narrative.
 ## 2022-10-24 - Day 6: Final narrative
 
-- Task summary: Pulled together the final narrative for the India Budget 2020 analysis. The analysis had several threads — sector allocation, fiscal deficit, revenue mix, and disinvestment — and needed a coherent story connecting them. Wrote an executive summary that led with the three main findings and then described each in more detail. Also added a data sources section with proper citation and a limitations caveat about using announced vs actual expenditure figures.
+- Task summary: Pulled together the final narrative for the India Budget 2020 analysis. The analysis had several threads - sector allocation, fiscal deficit, revenue mix, and disinvestment - and needed a coherent story connecting them. Wrote an executive summary that led with the three main findings and then described each in more detail. Also added a data sources section with proper citation and a limitations caveat about using announced vs actual expenditure figures.
 - Deliverable: Final narrative complete. Executive summary written. Sources and limitations documented.
 ## 2022-11-28 - Day 7: Repository cleanup
 
